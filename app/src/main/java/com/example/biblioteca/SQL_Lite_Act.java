@@ -25,7 +25,7 @@ public class SQL_Lite_Act extends AppCompatActivity {
     // Añade ordenadores a nuestra tabla.
     public void anadirLibro(View view){
         // Creamos instancia de nuestra clase.
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Gestion", null, 1);
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Biblioteca", null, 1);
 
         // Sobreescribimos nuestra base de datos
         SQLiteDatabase DataBase = admin.getWritableDatabase();
