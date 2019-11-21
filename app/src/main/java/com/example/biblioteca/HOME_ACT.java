@@ -55,4 +55,9 @@ public class HOME_ACT extends AppCompatActivity {
         Intent i = new Intent(this, INFO_ACT.class);
         startActivity(i);
     }
+
+    public void db(View view){
+        Intent i = new Intent(this, SQL_Lite_Act.class);
+        startActivity(i);
+    }
 }
