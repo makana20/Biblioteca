@@ -71,18 +71,21 @@
             android:id="@+id/btnAnadir"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:onClick="anadirLibro"
             android:text="Añadir Libros" />
 
         <Button
             android:id="@+id/btnModificar"
             android:layout_width="match_parent"
             android:layout_height="58dp"
+            android:onClick="modificarLibro"
             android:text="Modificar Libros" />
 
         <Button
             android:id="@+id/btnEliminar"
             android:layout_width="match_parent"
             android:layout_height="62dp"
+            android:onClick="eliminarLibro"
             android:text="Eliminar Libros" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
