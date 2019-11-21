@@ -28,7 +28,7 @@ public class SQL_Lite_Act extends AppCompatActivity {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Biblioteca", null, 1);
 
         // Sobreescribimos nuestra base de datos
-        SQLiteDatabase DataBase = admin.getWritableDatabase();
+        SQLiteDatabase baseDeDatos = admin.getWritableDatabase();
 
         // Comprobamos que nuestros registro no esta vacio.
         if(!et1.getText().toString().isEmpty()){
@@ -41,13 +41,62 @@ public class SQL_Lite_Act extends AppCompatActivity {
             registro.put("precio", et3.getText().toString());
 
             // Agregamos el registro a nuestra base de datos.
-            DataBase.insert("libros", null, registro);
+            baseDeDatos.insert("libros", null, registro);
 
             // Cerramos nuestra base de datos.
-            DataBase.close();
+            baseDeDatos.close();
 
             // Mensaje validando la inseccion de Datos.
             Toast.makeText(this, "Se a ingresado un nuevo libro", Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(this, "Complete los campos vacios", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    // Modificamos datos de nuestra tabla.
+    public void modificarLibro(View view){
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Biblioteca", null, 1);
+        SQLiteDatabase baseDeDatos = admin.getWritableDatabase();
+
+        if(!et1.getText().toString().isEmpty()){
+            ContentValues registro = new ContentValues();
+
+            registro.put("codigo", et1.getText().toString());
+            registro.put("nombre", et2.getText().toString());
+            registro.put("precio", et3.getText().toString());
+
+            baseDeDatos.update("libro", registro, et1.getText().toString(), null);
+
+            baseDeDatos.close();
+
+            Toast.makeText(this, "Datos actualizados", Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(this, "Complete el campo codigo se encuentra vacio", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    // Eliminar datos de nuestra tabla.
+    public void eliminarLibro(View view){
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Biblioteca", null, 1);
+        SQLiteDatabase baseDeDatos = admin.getWritableDatabase();
+
+        if(!et1.getText().toString().isEmpty()){
+            ContentValues registro = new ContentValues();
+
+            registro.put("codigo", et1.getText().toString());
+            registro.put("nombre", et2.getText().toString());
+            registro.put("precio", et3.getText().toString());
+
+            baseDeDatos.delete("libro", et1.getText().toString(), null);
+
+            baseDeDatos.close();
+
+            Toast.makeText(this, "Datos eliminado", Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(this, "Complete el campo codigo se encuentra vacio", Toast.LENGTH_LONG).show();
         }
     }
 }
