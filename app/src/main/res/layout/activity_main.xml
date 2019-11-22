@@ -34,16 +34,16 @@
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Ingresar Usuario" />
+            android:hint="Ingresar Usuario"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/txPassword"
             android:layout_width="match_parent"
             android:layout_height="63dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Ingresar Password" />
+            android:hint="Ingresar Password"
+            android:inputType="textPersonName" />
     </LinearLayout>
 
     <Button

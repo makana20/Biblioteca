@@ -36,24 +36,24 @@
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Ingrese Codigo" />
+            android:hint="Ingrese Codigo"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/ingNombre"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Ingrese Nombre" />
+            android:hint="Ingrese Nombre"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/ingPrecio"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Ingrese Precio" />
+            android:hint="Ingrese Precio"
+            android:inputType="textPersonName" />
     </LinearLayout>
 
     <LinearLayout
