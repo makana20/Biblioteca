@@ -3,6 +3,7 @@ package com.example.biblioteca;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -61,12 +62,13 @@ public class SQL_Lite_Act extends AppCompatActivity {
 
         if(!et1.getText().toString().isEmpty()){
             ContentValues registro = new ContentValues();
+            String codigo = et1.getText().toString();
 
-            registro.put("codigo", Integer.valueOf(et1.getText().toString()));
+            registro.put("codigo", et1.getText().toString());
             registro.put("nombre", et2.getText().toString());
-            registro.put("precio", Float.parseFloat(et3.getText().toString()));
+            registro.put("precio", et3.getText().toString());
 
-            BaseDeDatos.update("LIBROS", registro, et1.getText().toString(), null);
+            BaseDeDatos.update("LIBROS", registro,"codigo=" + codigo, null);
 
             BaseDeDatos.close();
 
@@ -83,13 +85,9 @@ public class SQL_Lite_Act extends AppCompatActivity {
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
         if(!et1.getText().toString().isEmpty()){
-            ContentValues registro = new ContentValues();
+            String codigo = et1.getText().toString();
 
-            registro.put("codigo", Integer.valueOf(et1.getText().toString()));
-            registro.put("nombre", et2.getText().toString());
-            registro.put("precio", Float.parseFloat(et3.getText().toString()));
-
-            BaseDeDatos.delete("LIBROS", et1.getText().toString(), null);
+            BaseDeDatos.delete("LIBROS", "codigo=" + codigo, null);
 
             BaseDeDatos.close();
 
