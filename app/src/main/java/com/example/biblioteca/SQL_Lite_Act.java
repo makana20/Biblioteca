@@ -12,12 +12,6 @@ import android.widget.Toast;
 public class SQL_Lite_Act extends AppCompatActivity {
     private EditText et1, et2, et3;
 
-    // Creamos instancia de nuestra clase.
-    private AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Biblioteca", null, 1);
-
-    // Sobreescribimos nuestra base de datos
-    private SQLiteDatabase baseDeDatos = admin.getWritableDatabase();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +24,11 @@ public class SQL_Lite_Act extends AppCompatActivity {
 
     // Añade ordenadores a nuestra tabla.
     public void anadirLibro(View view){
+        // Creamos instancia de nuestra clase.
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "BIBLIOTECA", null, 1);
+
+        // Sobreescribimos nuestra base de datos
+        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
         // Comprobamos que nuestros registro no esta vacio.
         if(!et1.getText().toString().isEmpty()){
@@ -42,10 +41,10 @@ public class SQL_Lite_Act extends AppCompatActivity {
             registro.put("precio", Float.parseFloat(et3.getText().toString()));
 
             // Agregamos el registro a nuestra base de datos.
-            baseDeDatos.insert("libros", null, registro);
+            BaseDeDatos.insert("LIBROS", null, registro);
 
             // Cerramos nuestra base de datos.
-            baseDeDatos.close();
+            BaseDeDatos.close();
 
             // Mensaje validando la inseccion de Datos.
             Toast.makeText(this, "Se a ingresado un nuevo libro", Toast.LENGTH_LONG).show();
@@ -57,6 +56,8 @@ public class SQL_Lite_Act extends AppCompatActivity {
 
     // Modificamos datos de nuestra tabla.
     public void modificarLibro(View view){
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "BIBLIOTECA", null, 1);
+        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
         if(!et1.getText().toString().isEmpty()){
             ContentValues registro = new ContentValues();
@@ -65,9 +66,9 @@ public class SQL_Lite_Act extends AppCompatActivity {
             registro.put("nombre", et2.getText().toString());
             registro.put("precio", Float.parseFloat(et3.getText().toString()));
 
-            baseDeDatos.update("libros", registro, et1.getText().toString(), null);
+            BaseDeDatos.update("LIBROS", registro, et1.getText().toString(), null);
 
-            baseDeDatos.close();
+            BaseDeDatos.close();
 
             Toast.makeText(this, "Datos actualizados", Toast.LENGTH_LONG).show();
         }
@@ -78,6 +79,8 @@ public class SQL_Lite_Act extends AppCompatActivity {
 
     // Eliminar datos de nuestra tabla.
     public void eliminarLibro(View view){
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "BIBLIOTECA", null, 1);
+        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
         if(!et1.getText().toString().isEmpty()){
             ContentValues registro = new ContentValues();
@@ -86,9 +89,9 @@ public class SQL_Lite_Act extends AppCompatActivity {
             registro.put("nombre", et2.getText().toString());
             registro.put("precio", Float.parseFloat(et3.getText().toString()));
 
-            baseDeDatos.delete("libros", et1.getText().toString(), null);
+            BaseDeDatos.delete("LIBROS", et1.getText().toString(), null);
 
-            baseDeDatos.close();
+            BaseDeDatos.close();
 
             Toast.makeText(this, "Datos eliminado", Toast.LENGTH_LONG).show();
         }
