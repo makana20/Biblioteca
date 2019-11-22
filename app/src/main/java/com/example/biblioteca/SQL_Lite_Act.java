@@ -12,6 +12,12 @@ import android.widget.Toast;
 public class SQL_Lite_Act extends AppCompatActivity {
     private EditText et1, et2, et3;
 
+    // Creamos instancia de nuestra clase.
+    private AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Biblioteca", null, 1);
+
+    // Sobreescribimos nuestra base de datos
+    private SQLiteDatabase baseDeDatos = admin.getWritableDatabase();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +30,6 @@ public class SQL_Lite_Act extends AppCompatActivity {
 
     // Añade ordenadores a nuestra tabla.
     public void anadirLibro(View view){
-        // Creamos instancia de nuestra clase.
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Biblioteca", null, 1);
-
-        // Sobreescribimos nuestra base de datos
-        SQLiteDatabase baseDeDatos = admin.getWritableDatabase();
 
         // Comprobamos que nuestros registro no esta vacio.
         if(!et1.getText().toString().isEmpty()){
@@ -36,9 +37,9 @@ public class SQL_Lite_Act extends AppCompatActivity {
             ContentValues registro = new ContentValues();
 
             // Agregamos nuestros datos extraidos.
-            registro.put("codigo", et1.getText().toString());
+            registro.put("codigo", Integer.valueOf(et1.getText().toString()));
             registro.put("nombre", et2.getText().toString());
-            registro.put("precio", et3.getText().toString());
+            registro.put("precio", Float.parseFloat(et3.getText().toString()));
 
             // Agregamos el registro a nuestra base de datos.
             baseDeDatos.insert("libros", null, registro);
@@ -56,17 +57,15 @@ public class SQL_Lite_Act extends AppCompatActivity {
 
     // Modificamos datos de nuestra tabla.
     public void modificarLibro(View view){
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Biblioteca", null, 1);
-        SQLiteDatabase baseDeDatos = admin.getWritableDatabase();
 
         if(!et1.getText().toString().isEmpty()){
             ContentValues registro = new ContentValues();
 
-            registro.put("codigo", et1.getText().toString());
+            registro.put("codigo", Integer.valueOf(et1.getText().toString()));
             registro.put("nombre", et2.getText().toString());
-            registro.put("precio", et3.getText().toString());
+            registro.put("precio", Float.parseFloat(et3.getText().toString()));
 
-            baseDeDatos.update("libro", registro, et1.getText().toString(), null);
+            baseDeDatos.update("libros", registro, et1.getText().toString(), null);
 
             baseDeDatos.close();
 
@@ -79,17 +78,15 @@ public class SQL_Lite_Act extends AppCompatActivity {
 
     // Eliminar datos de nuestra tabla.
     public void eliminarLibro(View view){
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Biblioteca", null, 1);
-        SQLiteDatabase baseDeDatos = admin.getWritableDatabase();
 
         if(!et1.getText().toString().isEmpty()){
             ContentValues registro = new ContentValues();
 
-            registro.put("codigo", et1.getText().toString());
+            registro.put("codigo", Integer.valueOf(et1.getText().toString()));
             registro.put("nombre", et2.getText().toString());
-            registro.put("precio", et3.getText().toString());
+            registro.put("precio", Float.parseFloat(et3.getText().toString()));
 
-            baseDeDatos.delete("libro", et1.getText().toString(), null);
+            baseDeDatos.delete("libros", et1.getText().toString(), null);
 
             baseDeDatos.close();
 
