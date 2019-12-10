@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText tx2;
     private ProgressBar pbar;
     private Button btn;
+    private String[] datos = {"Farenheit", "Revival", "EL Alquimista"};
+    private String[] datos2 = {"5000", "12000", "45000"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void gitHub(View view){
         Intent i = new Intent(getBaseContext(), Github_act.class);
+        i.putExtra("libros", datos);
+        i.putExtra("precios", datos2);
         startActivity(i);
     }
 
