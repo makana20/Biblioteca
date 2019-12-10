@@ -21,6 +21,7 @@ public class Github_act extends AppCompatActivity {
 
         Bundle dato = getIntent().getExtras();
         String[] libro = dato.getStringArray("libros");
+        String[] precio = dato.getStringArray("precios");
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, libro);
         spn.setAdapter(adapter);
