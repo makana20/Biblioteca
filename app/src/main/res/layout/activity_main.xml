@@ -80,4 +80,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.878"
         app:srcCompat="@drawable/location" />
+
+    <ImageView
+        android:id="@+id/github"
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:onClick="gitHub"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898"
+        app:srcCompat="@drawable/icon_github" />
 </androidx.constraintlayout.widget.ConstraintLayout>
