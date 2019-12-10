@@ -45,7 +45,7 @@ public class HOME_ACT extends AppCompatActivity {
     }
 
     public void libros(View view){
-        String[] datos = {"Farenheit", "Revival", "Tesla"};
+        String[] datos = {"Farenheit", "Revival", "EL Alquimista"};
         Intent i = new Intent(this, LIBROS_ACT.class);
         i.putExtra("libros", datos);
         startActivity(i);

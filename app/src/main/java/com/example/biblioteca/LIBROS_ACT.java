@@ -61,11 +61,11 @@ public class LIBROS_ACT extends AppCompatActivity {
 
         if(spn.getSelectedItem().equals("El Alquimista"))
         {
-            String precioTesla = precios[2];
+            String precioAlquimista = precios[2];
 
             int stock = Integer.parseInt(tx1.getText().toString());
             int costo = Integer.parseInt(tx2.getText().toString());
-            int precioLibro = Integer.parseInt(precioTesla);
+            int precioLibro = Integer.parseInt(precioAlquimista);
 
             int resultado = precioLibro*stock+costo;
 
