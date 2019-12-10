@@ -46,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void location(View view){
+        Intent i = new Intent(getBaseContext(), MapsActivity.class);
+        startActivity(i);
+    }
+
     class Tack extends AsyncTask<String, Void, String>{
         @Override
         protected void onPreExecute() {
