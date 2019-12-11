@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MQTT_ACT">
+
+    <TextView
+        android:id="@+id/text_mqtt"
+        android:layout_width="164dp"
+        android:layout_height="43dp"
+        android:text="MQTT BOOKS"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="341dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625">
+
+        <Button
+            android:id="@+id/btn_revival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:minHeight="60dip"
+            android:text="REVIVAL" />
+
+        <Button
+            android:id="@+id/btn_farenheith"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:minHeight="60dip"
+            android:text="FARENHEITH" />
+
+        <Button
+            android:id="@+id/btn_alquimista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:minHeight="60dip"
+            android:text="EL ALQUIMISTA" />
+
+        <Button
+            android:id="@+id/btn_poder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:minHeight="60dip"
+            android:text="EL PODER" />
+
+        <Button
+            android:id="@+id/btn_despertar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dip"
+            android:text="EL DESPERTAR" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
