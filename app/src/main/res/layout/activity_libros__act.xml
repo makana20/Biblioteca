@@ -84,6 +84,7 @@
         android:id="@+id/btn_libros"
         android:layout_width="69dp"
         android:layout_height="61dp"
+        android:onClick="mqtt_act"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.131"
