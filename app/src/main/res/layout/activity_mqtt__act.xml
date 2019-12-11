@@ -32,20 +32,22 @@
         app:layout_constraintVertical_bias="0.625">
 
         <Button
-            android:id="@+id/btn_revival"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10px"
-            android:minHeight="60dip"
-            android:text="REVIVAL" />
-
-        <Button
             android:id="@+id/btn_farenheith"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10px"
             android:minHeight="60dip"
+            android:onClick="farenheith_btn"
             android:text="FARENHEITH" />
+
+        <Button
+            android:id="@+id/btn_revival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:minHeight="60dip"
+            android:onClick="revival_btn"
+            android:text="REVIVAL" />
 
         <Button
             android:id="@+id/btn_alquimista"
@@ -53,6 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10px"
             android:minHeight="60dip"
+            android:onClick="alquimista_btn"
             android:text="EL ALQUIMISTA" />
 
         <Button
@@ -61,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10px"
             android:minHeight="60dip"
+            android:onClick="poder_btn"
             android:text="EL PODER" />
 
         <Button
@@ -68,6 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="60dip"
+            android:onClick="despertar_btn"
             android:text="EL DESPERTAR" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
