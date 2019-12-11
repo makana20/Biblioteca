@@ -33,6 +33,7 @@
         android:id="@+id/message_text"
         android:layout_width="325dp"
         android:layout_height="64dp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

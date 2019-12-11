@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText tx2;
     private ProgressBar pbar;
     private Button btn;
-    private String[] datos = {"Farenheit", "Revival", "EL Alquimista"};
+    private String[] datos = {"Farenheit", "Revival", "El Alquimista"};
     private String[] datos2 = {"5000", "12000", "45000"};
 
     @Override
