@@ -61,7 +61,7 @@ public class HOME_ACT extends AppCompatActivity {
         startActivity(i);
     }
 
-    private void security(View view){
+    public void security(View view){
         Intent i = new Intent(this, Security_ACT.class);
         startActivity(i);
     }
