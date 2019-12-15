@@ -25,8 +25,8 @@ public class Security_ACT extends AppCompatActivity {
     }
 
     public void vulnerabilidad_1(View view){
-        String username = "";
-        String password = "";
+        String username = "jose";
+        String password = "1234asd";
 
         // Las variables nunca deben ser visibles si es posible estas deben se encriptadas para
         // evitar su manipulación y desemcriptadas para su utilizacion dentro de un programa.
