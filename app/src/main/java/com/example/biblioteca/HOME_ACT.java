@@ -60,4 +60,9 @@ public class HOME_ACT extends AppCompatActivity {
         Intent i = new Intent(this, SQL_Lite_Act.class);
         startActivity(i);
     }
+
+    private void security(View view){
+        Intent i = new Intent(this, Security_ACT.class);
+        startActivity(i);
+    }
 }
