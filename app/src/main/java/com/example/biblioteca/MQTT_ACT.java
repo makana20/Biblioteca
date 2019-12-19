@@ -41,13 +41,10 @@ public class MQTT_ACT extends AppCompatActivity {
             token.setActionCallback(new IMqttActionListener() {
                 @Override
                 public void onSuccess(IMqttToken asyncActionToken) {
-                    // We are connected
                     Toast.makeText(getBaseContext(), "Se a conectado a mqtt", Toast.LENGTH_LONG).show();
                 }
-
                 @Override
                 public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                    // Something went wrong e.g. connection timeout or firewall problems
                     Toast.makeText(getBaseContext(), "No se a conectado a mqtt", Toast.LENGTH_LONG).show();
                 }
             });
@@ -69,7 +66,6 @@ public class MQTT_ACT extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
     public void revival_btn(View view){
         String topic = topicStr;
         String mgs = "REVIVAL";

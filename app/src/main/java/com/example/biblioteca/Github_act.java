@@ -38,7 +38,6 @@ public class Github_act extends AppCompatActivity {
                 Object item = parent.getItemAtPosition(pos);
                 tx.setText("El valor de " + item.toString() + " es: " + precio[pos]);
             }
-
             public void onNothingSelected(AdapterView<?> parent){}
         });
     }
