@@ -41,11 +41,11 @@ public class MQTT_ACT extends AppCompatActivity {
             token.setActionCallback(new IMqttActionListener() {
                 @Override
                 public void onSuccess(IMqttToken asyncActionToken) {
-                    Toast.makeText(getBaseContext(), "Se a conectado a mqtt", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Se a conectado ", Toast.LENGTH_LONG).show();
                 }
                 @Override
                 public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                    Toast.makeText(getBaseContext(), "No se a conectado a mqtt", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "No se a conectado", Toast.LENGTH_LONG).show();
                 }
             });
 
