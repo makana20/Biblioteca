@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.LinkedHashMap;
 
 public class Github_act extends AppCompatActivity {
     private Spinner spn;

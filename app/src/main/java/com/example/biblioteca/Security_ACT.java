@@ -13,6 +13,9 @@ public class Security_ACT extends AppCompatActivity {
     private Button btn_vul1, btn_vul2, btn_vul3;
     private String msg;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
