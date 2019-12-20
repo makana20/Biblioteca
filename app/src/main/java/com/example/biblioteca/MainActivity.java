@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar pbar;
     private Button btn;
     private String[] datos = {"Farenheit", "Revival", "El Alquimista"};
-    private String[] datos2 = {"5000", "12000", "45000", "88000"};
+    private String[] datos2 = {"7000", "22000", "45000", "88000"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
