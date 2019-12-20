@@ -42,18 +42,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-    public void location(View view){
-        Intent i = new Intent(getBaseContext(), MapsActivity.class);
-        startActivity(i);
-    }
-
     public void gitHub(View view){
         Intent i = new Intent(getBaseContext(), Github_act.class);
         i.putExtra("libros", datos);
         i.putExtra("precios", datos2);
         startActivity(i);
     }
+
+    public void location(View view){
+        Intent i = new Intent(getBaseContext(), MapsActivity.class);
+        startActivity(i);
+    }
+
+
 
     class Tack extends AsyncTask<String, Void, String>{
         @Override
