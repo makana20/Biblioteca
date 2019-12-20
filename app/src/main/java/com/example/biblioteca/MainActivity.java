@@ -41,12 +41,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void mostrar(){
-        Intent i = new Intent(getBaseContext(), HOME_ACT.class);
-        i.putExtra("nombre", tx1.getText().toString());
-        i.putExtra("password", tx2.getText().toString());
-        startActivity(i);
-    }
+
 
     public void location(View view){
         Intent i = new Intent(getBaseContext(), MapsActivity.class);
@@ -85,6 +80,13 @@ public class MainActivity extends AppCompatActivity {
             pbar.setVisibility(View.INVISIBLE);
             btn.setEnabled(true);
             Toast.makeText(getBaseContext(), "Acceso Concedido", Toast.LENGTH_SHORT).show();
+        }
+
+        public void mostrar(){
+            Intent i = new Intent(getBaseContext(), HOME_ACT.class);
+            i.putExtra("nombre", tx1.getText().toString());
+            i.putExtra("password", tx2.getText().toString());
+            startActivity(i);
         }
     }
 }

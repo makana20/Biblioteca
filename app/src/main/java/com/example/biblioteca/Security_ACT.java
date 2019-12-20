@@ -51,8 +51,8 @@ public class Security_ACT extends AppCompatActivity {
 
     public void vulnerabilidad_3(View view){
         String url = "https://www.google.cl";
-        String user = "jose";
-        String address = "la florida";
+        String user = "Makana";
+        String address = "Santiasco";
         String query = "insert into user where name = " + user;
 
         // El no utilizar metodos de conexion y validacion de datos para la insercion de estos a

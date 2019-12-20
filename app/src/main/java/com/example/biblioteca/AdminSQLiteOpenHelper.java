@@ -1,8 +1,8 @@
 package com.example.biblioteca;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase; // Importamos clase base de datos.
-import android.database.sqlite.SQLiteOpenHelper; // Importamos clase OpenHelper.
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
@@ -13,7 +13,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase Database) {
-        // Creando nuestra primera tabla con SQLite.
+
         Database.execSQL("CREATE TABLE LIBROS(codigo int primary key, nombre text, precio float)");
     }
 
